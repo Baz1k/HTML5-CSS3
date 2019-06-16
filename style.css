@@ -21,15 +21,19 @@ a {
     margin: 0 auto;
 }
 
-header {
+header {    
+    padding: 40px 120px;
     display: grid;
     grid-template-rows: 120px auto;
+    grid-template-columns: 100%;
     background-color: #290000;
     color: #fff;
+    justify-items: center;
+    align-items: center;
 }
 
-.navbar {
-    padding: 0 120px;
+.navbar {   
+    width: 100%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,12 +50,14 @@ header {
 
 .navbar ul {
     display: flex;
+    justify-content: center;
     list-style-type: none;
 }
 
 .navbar ul li {
     height: 30px;
-    padding: 0 20px;    
+    padding: 0 20px; 
+    text-align: center;   
 }
 
 .navbar ul li:hover {
@@ -65,8 +71,7 @@ header {
     line-height: 30px;
 }
 
-.headBlock {
-    padding: 0 120px 45px;
+.headBlock {    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -116,20 +121,20 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 430px;
-    height: 430px;
-    border-radius: 215px;
+    width: 30vw;  /* Как корректнее задать квадрат....  */
+    height: 30vw; /* ....без использования px? Допустим, 40% от ширины блока? */
+    border-radius: 50%;
     background: #6b6b6b;
 }
 
 .headBlockImgSmall {
-    width: 380px;
-    height: 380px;
-    border-radius: 190px;
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
     background: #333333;
 }
 
-main {
+main {    
     padding: 60px 120px;
     background-color: #660000;
     display: grid;
@@ -204,9 +209,6 @@ main {
     background-color: #303030;
 }
 
-
-/* Можно ли разместить данный блок поверх предыдущей линии (.line) с помощью grid, не используя relative/absolute? */
-
 .mainBlockTwo h2 {
     position: absolute;
     height: 24px;
@@ -220,13 +222,13 @@ main {
 }
 
 .mainBlockThree {
+    width: 100%;
     display: grid;
     grid-gap: 30px;
-    grid-template: 1fr 1fr / repeat(3, 1fr);
+    grid-template: 1fr 1fr / repeat(3, 1fr);       
 }
 
-.mainBlockThree .portfolio {
-    width: 290px;
+.mainBlockThree .portfolio {    
     height: 190px;
     border: 5px solid #fff;
     display: flex;
@@ -253,17 +255,16 @@ main {
     display: none;   
 }
 
-footer {
-    padding: 40px 120px 0;
+footer {    
+    padding: 40px 120px ;
     display: grid;
-    grid-template: auto 60px / repeat(4, 1fr);
+    grid-template: auto / repeat(4, 1fr);
     grid-column-gap: 25px;
     grid-row-gap: 40px;
     background-color: #303030;
     
     grid-template-areas:
-        "footerBlog footerLinks footerTweets footerForm"
-        "footerCopyLeft footerCopyLeft footerCopyRight footerCopyRight";
+        "footerBlog footerLinks footerTweets footerForm";
 }
 
 footer h4 {
@@ -282,7 +283,6 @@ footer h4 {
     margin-bottom: 17px;
 }
 
-/* Как обратиться к каждому из следующих <p>, не присваивая им class? */
 .footerBlog .footerBlog_p1 {
     color: #666666;
     font-size: 10px;
@@ -374,30 +374,175 @@ footer h4 {
     justify-self: start;
 }
 
-.footerCopyrightLeft {
-    position: relative;    
-    width: 100%;
-    grid-area: footerCopyLeft;
-    justify-self: start;
-    align-self: center;
+.footerCopyright {    
+    border-top: 1px solid #3a3a3a;
+    background-color: #303030;
+    padding: 23px 120px;
+    display: flex;
+    justify-content: space-between;
     color: #979797;
     font-size: 13px;
 }
 
-.footerCopyrightRight {
-    grid-area: footerCopyRight;
-    justify-self: end;
-    align-self: center;
-    color: #979797;
-    font-size: 13px;    
+@media (max-width: 1100px) {
+    header {
+        padding: 40px 60px;
+        grid-row-gap: 40px;
+    }    
+
+    .navbar {
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;    
+    }
+
+    main {
+        padding: 60px;
+    }
+
+    .navbarText {
+        text-align: center;
+    }  
 }
 
-/* Можно ли эту полоску, отделяющую самую нижнюю часть, реализовать как-то по-другому, не меняя при этом разметку Grid? */
-.footerCopyrightLeft:before {
-    content: "";
-    position: absolute;
-    width: calc(200% + 263px);
-    left: -120px;
-    top: -100%;
-    border: 1px solid #3a3a3a;       
+@media (max-width: 999px) {
+    .headBlockText h1 {
+        font-size: 30px;
+        margin-bottom: 20px;        
+    }
+
+    main {
+        padding: 60px;
+    }
+
+    .mainBlockOne {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    .mainBlockThree {        
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);          
+    }
+
+    .mainBlockThree .portfolio {        
+        height: 240px;        
+    }
+
+    footer {        
+        padding: 40px 60px ;        
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;          
+        
+        grid-template-areas:
+            "footerBlog footerLinks footerTweets"
+            "footerForm footerForm footerForm";
+    }
+
+    .footerForm button {
+        width: 30%;
+        padding: 15px 15px;        
+        font-size: 16px;       
+    }
+
+    .footerForm form {
+        grid-row-gap: 15px;
+    }
+
+    .footerCopyright {
+        padding: 23px 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .headBlock {        
+        display: grid;
+        grid-row-gap: 20px;
+        grid-template: repeat(2, auto) / auto 1fr auto;
+        justify-items: center;
+    }
+
+    .headBlockImg {
+        grid-row: 1/2;
+        grid-column: 2/3;        
+    }
+
+    .headBlockText {
+        grid-row: 2/3;
+        grid-column: 1/4; 
+        text-align: center;               
+    }  
+
+    .headBlockText h1 {
+        font-size: 30px;
+        margin-bottom: 20px;          
+    }
+
+    .headBlockText p {
+        text-align: justify;
+    }
+
+    .headBlockText button {        
+        padding: 15px 15px;        
+        font-size: 16px;         
+    }
+
+    .mainBlockOne {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+    }
+
+    .cardBlock p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .mainBlockThree {        
+        grid-gap: 30px;
+        grid-template-columns: repeat(1, 1fr);        
+        
+    }
+
+    .mainBlockThree .portfolio {        
+        height: 290px;        
+    }
+
+    .navbar ul li {            
+        padding: 0 15px;         
+    }
+   
+}
+
+@media (max-width: 600px) {
+    header,
+    main,
+    footer,
+    .footerCopyright {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+    }
+
+    footer {                   
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;          
+        
+        grid-template-areas:
+            "footerBlog footerTweets"
+            "footerLinks footerLinks"
+            "footerForm footerForm";        
+    }
+
+    .footerForm button {
+        width: 35%;
+    }
+
+    .footerCopyright {
+        flex-direction: column;        
+        align-items: center;
+    }
 }
