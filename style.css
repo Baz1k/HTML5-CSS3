@@ -22,7 +22,7 @@ a {
 }
 
 header {    
-    padding: 40px 120px;
+    padding: 0 120px 40px;
     display: grid;
     grid-template-rows: 120px auto;
     grid-template-columns: 100%;
@@ -39,31 +39,60 @@ header {
     align-items: center;
 }
 
+.navbarText {
+    animation-name: logoAnimation;
+    animation-duration: 1s;
+    position: relative;
+}
+
+@keyframes logoAnimation {
+    from {
+        left: -120px;
+    }
+    to {
+        left: 0;
+    }
+}
+
 .navbarText h2 {
     font-size: 28px;
 }
 
 .navbarText p {
     font-size: 10px;
-    color: #979797;
+    color: #979797;    
 }
 
 .navbar ul {
     display: flex;
     justify-content: center;
     list-style-type: none;
+    animation-name: menuAnimation;
+    animation-duration: 1s;
+    position: relative;
+}
+
+@keyframes menuAnimation {
+    from {
+        right: -120px;
+    }
+    to {
+        right: 0;
+    }
 }
 
 .navbar ul li {
     height: 30px;
     padding: 0 20px; 
+    border-radius: 10px;
     text-align: center;   
 }
 
 .navbar ul li:hover {
-    background: #76c38f;
-    border-radius: 10px;
+    background: #76c38f;    
     cursor: pointer;
+    transform: scale(1.15, 1.15);
+    transition: .5s;
 }
 
 .navbar ul li a {
@@ -87,6 +116,19 @@ header {
     padding: 0 45px;
 }
 
+.headBlockImg {    
+    animation: circleAnimation 1s linear 0s infinite;
+}
+
+@keyframes circleAnimation {
+    from {
+        transform: rotateY(0);            
+    }
+    to {
+        transform: rotateY(180deg);         
+    }
+}
+
 .headBlockText h1 {
     font-size: 46px;
     margin-bottom: 30px;
@@ -106,7 +148,7 @@ header {
     background-color: #76c38f;
     font-size: 13px;
     color: #fff;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Slab', serif;    
 }
 
 .headBlockText button:hover,
@@ -115,23 +157,25 @@ header {
     box-shadow: 0 0 2px #fff;
     color: #290000;
     font-family: 'Roboto Slab', serif;
+    transition-duration: .5s;
+    transform: perspective(50px) translateZ(-5px);
 }
 
 .headBlockImgBig {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30vw;  /* Как корректнее задать квадрат....  */
-    height: 30vw; /* ....без использования px? Допустим, 40% от ширины блока? */
+    width: 30vw;  
+    height: 30vw; 
     border-radius: 50%;
-    background: #6b6b6b;
+    background: #6b6b6b;      
 }
 
 .headBlockImgSmall {
     width: 85%;
     height: 85%;
     border-radius: 50%;
-    background: #333333;
+    background: #333333;    
 }
 
 main {    
@@ -147,28 +191,47 @@ main {
 .mainBlockOne {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 20px;
+    grid-column-gap: 20px;    
 }
 
-.cardBlock {
+.cardBlock {    
     background-color: #fff;
     width: auto;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 20px;  
+    transition-duration: .5s;  
+    transition-timing-function: linear; 
+    z-index: 15;    
 }
 
 .cardBlock:hover {
     background-color: #76c38f;
-    cursor: pointer;
-    transition: .3s;
+    cursor: pointer;      
 }
 
+/* Как можно реализовать эффект, описанный ниже, не описывая поведение для каждого элемента? А именно: чтобы при наведении на карточку она увеличивалась в размере (ну или приближалась по оси Z) и при этом была центрирована по горизонтали (без подгона с помощью calc/px).*/
+.cardBlock:nth-child(1):hover {    
+    transform: translateX(calc(150% + 30px)) scale(1.5);                 
+}
+
+.cardBlock:nth-child(2):hover {    
+    transform: translateX(calc(50% + 10px)) scale(1.5);             
+}
+
+.cardBlock:nth-child(3):hover {    
+    transform: translateX(calc(-50% - 10px)) scale(1.5);             
+}
+
+.cardBlock:nth-child(4):hover {    
+    transform: translateX(calc(-150% - 30px)) scale(1.5);              
+}
+/*-------------------------------------------------------------------*/
+
 .cardBlock:hover * {
-    color: #fff;
-    transition: .3s;
+    color: #fff;          
 }
 
 .cardBlock:hover div {
@@ -219,6 +282,19 @@ main {
     border-radius: 10px;
     padding: 12px 15px;
     z-index: 10;
+    animation: portfolioTitleAnimation 1s linear 0s infinite;
+}
+
+@keyframes portfolioTitleAnimation {
+    from {        
+        transform: rotateZ(-5deg)
+    }
+    50% {        
+        transform: rotateZ(5deg)
+    }
+    to {        
+        transform: rotateZ(-5deg)
+    }
 }
 
 .mainBlockThree {
@@ -228,19 +304,53 @@ main {
     grid-template: 1fr 1fr / repeat(3, 1fr);       
 }
 
+.mainBlockThree .portfolioRotate {
+    height: 190px;
+    position: relative;
+    perspective: 500px;
+}
+
 .mainBlockThree .portfolio {    
     height: 190px;
     border: 5px solid #fff;
     display: flex;
     align-items: flex-end;
     text-align: center;
-    background-color: #353535;
+    background-color: #353535;     
+    transform: rotateY(0deg);
+    transition-duration: 0.5s;
+    transition-delay: 0.5s;
+    transition-timing-function: linear;
 }
 
-.mainBlockThree .portfolio:hover {
+.mainBlockThree .portfolioInside {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: inherit;
+    height: inherit;
+    border: 5px solid #fff;
+    padding: 0 15px;
+    background-color: #353535;  
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    color: #fff;  
+    transform: rotateY(90deg);  
+    transition-duration: 0.5s;  
+    transition-timing-function: linear;
+}
+
+.mainBlockThree .portfolioRotate:hover .portfolio {
     cursor: pointer;
-    border: 5px solid #76c38f;
-    transition: .3s;
+    border: 5px solid #76c38f;    
+    transform: rotateY(-90deg);
+    transition-delay: 0s;
+}
+
+.mainBlockThree .portfolioRotate:hover .portfolioInside {
+    transform: rotateY(0deg);
+    transition-delay: 0.5s;
 }
 
 .mainBlockThree .portfolio p {
@@ -252,7 +362,7 @@ main {
 }
 
 .mainBlockThree .portfolio:hover p {
-    display: none;   
+    display: none;       
 }
 
 footer {    
