@@ -203,8 +203,7 @@ main {
     align-items: center;
     padding: 20px;  
     transition-duration: .5s;  
-    transition-timing-function: linear; 
-    z-index: 15;    
+    transition-timing-function: linear;        
 }
 
 .cardBlock:hover {
@@ -214,19 +213,19 @@ main {
 
 /* Как можно реализовать эффект, описанный ниже, не описывая поведение для каждого элемента? А именно: чтобы при наведении на карточку она увеличивалась в размере (ну или приближалась по оси Z) и при этом была центрирована по горизонтали (без подгона с помощью calc/px).*/
 .cardBlock:nth-child(1):hover {    
-    transform: translateX(calc(150% + 30px)) scale(1.5);                 
+    transform: translateX(calc(150% + 30px)) scale(1.5);     z-index: 15;             
 }
 
 .cardBlock:nth-child(2):hover {    
-    transform: translateX(calc(50% + 10px)) scale(1.5);             
+    transform: translateX(calc(50% + 10px)) scale(1.5);      z-index: 15;       
 }
 
 .cardBlock:nth-child(3):hover {    
-    transform: translateX(calc(-50% - 10px)) scale(1.5);             
+    transform: translateX(calc(-50% - 10px)) scale(1.5);     z-index: 15;         
 }
 
 .cardBlock:nth-child(4):hover {    
-    transform: translateX(calc(-150% - 30px)) scale(1.5);              
+    transform: translateX(calc(-150% - 30px)) scale(1.5);    z-index: 15;           
 }
 /*-------------------------------------------------------------------*/
 
