@@ -5,154 +5,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Grid CSS Adaptive</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
+        integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Home Work №7</title>
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <nav class="navbar">
-                <div class="navbarText">
-                    <h2>The Modernist</h2>
-                    <p>Free PSD Website Template</p>
+    <div class="m-mainContainer">
+        <header class="b-header d-flex justify-content-between">
+            <div class="b-header__logo">
+                <h1 class="b-header__title">CONCOMITANT</h1>
+                <p class="b-header__desc">Free PSD Website Template</p>
+            </div>
+            <div class="b-header__rightBlock d-flex flex-column justify-content-between">
+                <div class="b-socialIcons">
+                    <div class="b-socialIcons__item"><i class="fab fa-linkedin-in"></i></div>
+                    <div class="b-socialIcons__item"><i class="fab fa-twitter"></i></div>
+                    <div class="b-socialIcons__item"><i class="fab fa-pinterest"></i></div>
+                    <div class="b-socialIcons__item"><i class="fab fa-goodreads-g"></i></div>
+                    <div class="b-socialIcons__item"><i class="fas fa-rss"></i></div>
                 </div>
-                <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">STYLE DEMO</a></li>
-                    <li><a href="">FULL WIDTH</a></li>
-                    <li><a href="">DROPDOWN</a></li>
-                    <li><a href="">PORTFOLIO</a></li>
-                    <li><a href="">GALLERY</a></li>
-                </ul>
-            </nav>
-            <div class="headBlock"> 
-                <i class="fas fa-chevron-left fa-2x"></i>
-                <div class="headBlockText">
-                    <h1>Cursus penati saccum nulla</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic natus esse quos commodi itaque beatae maiores illo aliquam, voluptates libero aut cum necessitatibus similique minus. Incidunt odit dicta optio nesciunt?</p>
-                    <button>Read More Here »</button>
+                <div class="b-header__navLinks">
+                    <a class="m-linksGreen" href="#">Sign Up</a> |
+                    <a class="m-linksGreen" href="#">Login</a> |
+                    <a class="m-linksGreen" href="#">RSS Feeds</a> |
+                    <a class="m-linksGreen" href="#">Archived News</a>
                 </div>
-                <div class="headBlockImg">
-                    <div class="headBlockImgBig">
-                        <div class="headBlockImgSmall"></div>
-                    </div>
-                </div> 
-                <i class="fas fa-chevron-right fa-2x"></i> </div>
+            </div>
         </header>
-        <main>
-            <div class="mainBlockOne">
-                <div class="cardBlock">
-                    <div></div>
-                    <h2>SERVICE TITLE</h2>
-                    <p>Vestassapede et donec ut est libe ros sus et eget sed eget quisq ueta habitur augue</p>
-                </div>
-                <div class="cardBlock">
-                    <div></div>
-                    <h2>SERVICE TITLE</h2>
-                    <p>Vestassapede et donec ut est libe ros sus et eget sed eget quisq ueta habitur augue</p>
-                </div>
-                <div class="cardBlock">
-                    <div></div>
-                    <h2>SERVICE TITLE</h2>
-                    <p>Vestassapede et donec ut est libe ros sus et eget sed eget quisq ueta habitur augue</p>
-                </div>
-                <div class="cardBlock">
-                    <div></div>
-                    <h2>SERVICE TITLE</h2>
-                    <p>Vestassapede et donec ut est libe ros sus et eget sed eget quisq ueta habitur augue</p>
-                </div>
+
+        <nav class="row justify-content-between align-items-center b-navbar">
+            <ul class="b-navbar__menu d-flex">
+                <li><a href="#" class="b-navbar__menuItem">HOMEPAGE</a></li>
+                <li><a href="#" class="b-navbar__menuItem">STYLE DEMO</a></li>
+                <li><a href="#" class="b-navbar__menuItem">FULL WIDTH</a></li>
+                <li><a href="#" class="b-navbar__menuItem">PORTFOLIO</a></li>
+                <li><a href="#" class="b-navbar__menuItem">GALLERY</a></li>
+                <li><a href="#" class="b-navbar__menuItem">DROPDOWN</a></li>
+            </ul>
+            <div class="b-navbar__searchBlock">
+                <input class="b-navbar__inputSearch" type="text" placeholder="Search Our Website...">
+                <button class="b-navbar__buttonSearch">SEARCH</button>
             </div>
-            <div class="mainBlockTwo">
-                <div class="line"></div>
-                <h2>LATEST WORK</h2> </div>
-            <div class="mainBlockThree">
-                <div class="portfolioRotate">
-                    <div class="portfolio">
-                        <p>LOREM IPSUM DOLOR</p>                    
-                    </div>
-                    <div class="portfolioInside">Lorem ipsum dolor sit amet consectetur  adipisicing elit. Dolor et tenetur numquam delectus, maxime suscipit odit non vero voluptas ullam?                    
-                    </div>
-                </div>
-                <div class="portfolioRotate">
-                    <div class="portfolio">
-                        <p>LOREM IPSUM DOLOR</p>                    
-                    </div>
-                    <div class="portfolioInside">Lorem ipsum dolor sit amet consectetur  adipisicing elit. Dolor et tenetur numquam delectus, maxime suscipit odit non vero voluptas ullam?                    
-                    </div>
-                </div>
-                <div class="portfolioRotate">
-                    <div class="portfolio">
-                        <p>LOREM IPSUM DOLOR</p>                    
-                    </div>
-                    <div class="portfolioInside">Lorem ipsum dolor sit amet consectetur  adipisicing elit. Dolor et tenetur numquam delectus, maxime suscipit odit non vero voluptas ullam?                    
-                    </div>
-                </div>
-                <div class="portfolioRotate">
-                    <div class="portfolio">
-                        <p>LOREM IPSUM DOLOR</p>                    
-                    </div>
-                    <div class="portfolioInside">Lorem ipsum dolor sit amet consectetur  adipisicing elit. Dolor et tenetur numquam delectus, maxime suscipit odit non vero voluptas ullam?                    
-                    </div>
-                </div>
-                <div class="portfolioRotate">
-                    <div class="portfolio">
-                        <p>LOREM IPSUM DOLOR</p>                    
-                    </div>
-                    <div class="portfolioInside">Lorem ipsum dolor sit amet consectetur  adipisicing elit. Dolor et tenetur numquam delectus, maxime suscipit odit non vero voluptas ullam?                    
-                    </div>
-                </div>
-                <div class="portfolioRotate">
-                    <div class="portfolio">
-                        <p>LOREM IPSUM DOLOR</p>                    
-                    </div>
-                    <div class="portfolioInside">Lorem ipsum dolor sit amet consectetur  adipisicing elit. Dolor et tenetur numquam delectus, maxime suscipit odit non vero voluptas ullam?                    
-                    </div>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <div class="footerBlog">
-                <h4>From The Blog</h4>
-                <h5>Post Title</h5>
-                <p class="footerBlog_p1"><span>Admin</span>, domainname.com</p>
-                <p class="footerBlog_p2">Friday, 6th April 2000</p>
-                <p class="footerBlog_p3">Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede estibulum nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras urna urnaretra lor urna neque sed quis orci nulla.</p> <a href="#">Read More »</a> </div>
-            <div class="footerLinks">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#">» Lorem ipsum dolor sit</a></li>
-                    <li><a href="#">» Amet consectetur</a></li>
-                    <li><a href="#">» Praesent vel sem id</a></li>
-                    <li><a href="#">» Curabitur hendrerit est</a></li>
-                    <li><a href="#">» Aliquam eget erat nec sapien</a></li>
-                    <li><a href="#">» Cras id augue nunc</a></li>
-                    <li><a href="#">» Sed a nulla urna</a></li>
+        </nav>
+
+
+        <!-- Карусель Bootstrap 4 -->
+        <!-- Как расположить индикаторы и элементы управления слайдера в другом месте, как на макете? И вообще, как их переопределять? Удалять классы по умолчанию и писать свои? -->
+        <div class="container">
+            <div id="demo" class="carousel slide b-slider" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
                 </ul>
+
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="img-fluid" src="images/slide1.jpg" alt="SEO">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="img-fluid" src="images/slide2.jpg" alt="CMS">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="img-fluid" src="images/slide3.jpg" alt="E-Commerce">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+
             </div>
-            <div class="footerTweets">
-                <h4>Latest Tweets</h4>
-                <p> <a href="#">@namehere</a> Justoid nonummy laoreet phasellent penatoque in antesque pellus elis eget tincidunt. Nequatdui laorem justo a non tellus laoremut vitae doloreet 1 day ago
-                    <br>
-                    <br> <a href="#">@namehere</a> Justoid nonummy laoreet phasellent penatoque in antesque pellus elis eget tincidunt. Nequatdui laorem justo a non tellus laoremut vitae doloreet 1 day ago </p>
-            </div>
-            <div class="footerForm">
-                <h4>Contact Us</h4>
-                <form action="#">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email Address">
-                    <input type="text" placeholder="Subject">
-                    <textarea cols="30" rows="5" placeholder="Message"></textarea>
-                    <button type="submit">SUBMIT</button>
-                </form>
-            </div>
-        </footer>
-        <div class="footerCopyright">
-            <p>Copyright © 2013 Domain Name - All Rights Reserved</p>
-            <p>Template by OS Templates</p>
-        </div>        
+        </div>
     </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,69 @@
+.b-header {
+    background-color: #fff;
+    padding: 0 30px;
+    border-top: 5px solid $greenColor;
+
+    &__title {
+        color: #333333;
+        font-size: 36px;
+        line-height: 36px;
+        font-weight: 400;
+        margin-top: 35px;
+    }
+
+    &__title::first-letter {
+        font-size: 46px;
+    }
+
+    &__desc {
+        color: #999999;
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 35px;
+    }
+
+    &__navLinks {
+        margin-bottom: 35px;
+        font-size: 12px;
+        font-weight: 400;
+        color: $greenColor;
+    }    
+}
+
+.b-socialIcons {
+    display: grid;
+    padding: 8px 13px;    
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+    justify-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: $greenColor;
+    
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        color: #fff;
+        font-size: 18px;
+        background-color: black;
+        border-radius: 50%;
+    }
+    &__item:hover {
+        background-color: #00acee;
+        cursor: pointer;
+    }
+}
+
+.m-linksGreen,
+.m-linksGreen:hover {
+    color: $greenColor;    
+}
+
+.m-linksGreen:hover {
+    text-decoration: underline;
+}
+
+    

@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.m-mainContainer {
+  max-width: 1000px;
+  padding: 30px 20px;
+  background-color: #1f1f1f;
+  margin: 0 auto;
+}
+
+.b-header {
+  background-color: #fff;
+  padding: 0 30px;
+  border-top: 5px solid #81b300;
+}
+
+.b-header__title {
+  color: #333333;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  margin-top: 35px;
+}
+
+.b-header__title::first-letter {
+  font-size: 46px;
+}
+
+.b-header__desc {
+  color: #999999;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+.b-header__navLinks {
+  margin-bottom: 35px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #81b300;
+}
+
+.b-socialIcons {
+  display: grid;
+  padding: 8px 13px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 15px;
+  justify-items: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #81b300;
+}
+
+.b-socialIcons__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  font-size: 18px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.b-socialIcons__item:hover {
+  background-color: #00acee;
+  cursor: pointer;
+}
+
+.m-linksGreen,
+.m-linksGreen:hover {
+  color: #81b300;
+}
+
+.m-linksGreen:hover {
+  text-decoration: underline;
+}
+
+.b-navbar {
+  padding: 20px 30px 20px 20px;
+  background-color: #81b300;
+  margin: 0;
+}
+
+.b-navbar__menu {
+  list-style-type: none;
+  margin: 0;
+}
+
+.b-navbar__menuItem {
+  padding: 0 10px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.b-navbar__menuItem:hover {
+  color: #000;
+}
+
+.b-navbar__searchBlock {
+  display: grid;
+  grid-template: 30px / 3fr 1fr;
+}
+
+.b-navbar__inputSearch {
+  padding-left: 10px;
+  border: none;
+  color: #7f7f7f;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.b-navbar__buttonSearch {
+  border: none;
+  padding: 0 5px;
+  height: 100%;
+  border-left: 1px solid #ccc;
+  background-color: #fff;
+  color: #81b300;
+  font-size: 12px;
+  font-weight: 700;
+  transition: .3s;
+}
+
+.b-navbar__inputSearch:focus, .b-navbar__buttonSearch:focus {
+  outline: none;
+}
+
+.b-navbar__buttonSearch:hover {
+  box-shadow: 0 0 5px 1px #212121;
+}
+
+.b-navbar__buttonSearch:active {
+  transform: scale(0.95);
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 30px;
+}
+
+.b-slider {
+  border: 9px solid #fff;
+}
+/*# sourceMappingURL=style.css.map */
