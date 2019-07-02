@@ -1,0 +1,50 @@
+.b-header {
+    background-color: #fff;
+    padding: 0 30px;
+    margin: 0;
+    border-top: 5px solid $greenColor;
+
+    @include media-breakpoint-down(sm) {
+        padding: 0 10px;
+
+        &__logo {
+            order: 3;              
+            text-align: center;        
+        }
+    }
+        
+    &__title {
+        color: #333333;
+        font-size: 36px;
+        line-height: 36px;
+        font-weight: 400;
+        margin-top: 35px;     
+        
+        @include media-breakpoint-down(sm) {
+            margin-top: 0;
+            font-weight: 28;
+        }        
+    }
+
+    &__title::first-letter {
+        font-size: 46px;
+    }
+
+    &__desc {
+        color: #999999;
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 35px;
+    }
+
+    &__navLinks {
+        margin-bottom: 35px;
+        font-size: 12px;
+        font-weight: 400;
+        color: $greenColor;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 10px;
+        }
+    }    
+}    

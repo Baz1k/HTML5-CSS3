@@ -1,0 +1,44 @@
+.b-projects {
+
+    margin: 0;
+    background-color: #ffffff;
+    padding: 50px 15px;
+
+    @include media-breakpoint-down(sm) {
+        padding: 25px 10px;;
+    }
+
+    &_flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__img {
+        background-color: #333333;
+        flex: 0 0 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &_style {
+            border: 5px solid #ddd;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        color: #444444;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    &__linkDetails {
+        text-align: right;
+        font-size: 13px;
+        font-weight: 400;
+    }
+}

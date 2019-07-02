@@ -1,0 +1,65 @@
+.b-navbar {
+    padding: 20px 30px 20px 20px;
+    background-color: #81b300;
+    margin: 0;
+
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    &__menu {
+        list-style-type: none;
+        margin: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include media-breakpoint-down(md) {
+            order: 2;
+        }
+
+        &Item {
+            padding: 0 10px;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        &Item:hover {
+            color: #000;
+        }
+    }
+
+    &__searchBlock {
+        display: grid;
+        grid-template: 30px / 3fr 1fr;  
+        
+        @include media-breakpoint-down(md) {
+            margin-bottom: 20px;
+            // width: 40%;
+        }
+    }
+
+    &__inputSearch {
+        padding-left: 10px;
+        border: none;
+        color: #7f7f7f;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    &__buttonSearch {
+        border: none;
+        padding: 0 5px;
+        height: 100%;
+        border-left: 1px solid #ccc;
+        background-color: #fff;
+        color: $greenColor; 
+        font-size: 12px;
+        font-weight: 700;
+        transition: .3s;
+    }
+
+    
+}
