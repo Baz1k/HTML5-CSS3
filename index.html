@@ -15,12 +15,13 @@
 
 <body>
     <div class="m-mainContainer">
-        <header class="b-header d-flex justify-content-between">
-            <div class="b-header__logo">
+        <header class="b-header row justify-content-between">
+            <div class="col-md-4 b-header__logo">
                 <h1 class="b-header__title">CONCOMITANT</h1>
                 <p class="b-header__desc">Free PSD Website Template</p>
             </div>
-            <div class="b-header__rightBlock d-flex flex-column justify-content-between">
+            <div class="col-md-3 col-lg-4"></div>
+            <div class="col-md-5 col-lg-4 b-header__rightBlock d-flex flex-column align-items-center justify-content-between">
                 <div class="b-socialIcons">
                     <div class="b-socialIcons__item"><i class="fab fa-linkedin-in"></i></div>
                     <div class="b-socialIcons__item"><i class="fab fa-twitter"></i></div>
@@ -47,16 +48,13 @@
                 <li><a href="#" class="b-navbar__menuItem">DROPDOWN</a></li>
             </ul>
             <div class="b-navbar__searchBlock">
-                <input class="b-navbar__inputSearch" type="text" placeholder="Search Our Website...">
-                <button class="b-navbar__buttonSearch">SEARCH</button>
+                <input class="b-navbar__inputSearch m-inputState" type="text" placeholder="Search Our Website...">
+                <button class="b-navbar__buttonSearch m-buttonState">SEARCH</button>
             </div>
         </nav>
 
-
-        <!-- Карусель Bootstrap 4 -->
-        <!-- Как расположить индикаторы и элементы управления слайдера в другом месте, как на макете? И вообще, как их переопределять? Удалять классы по умолчанию и писать свои? -->
-        <div class="container">
-            <div id="demo" class="carousel slide b-slider" data-ride="carousel">
+        <div class="container-fluid b-slider">
+            <div id="demo" class="carousel slide b-slider_border" data-ride="carousel">
 
                 <!-- Indicators -->
                 <ul class="carousel-indicators">
@@ -88,7 +86,100 @@
 
             </div>
         </div>
-    </div>
+
+        <div class="row b-offer">
+            <div class="col-md-3 col-sm-6 b-offer__offerItem">
+                <!-- Здесь иконке я задал класс Элемента и Модификатор элемента. И уже в Модификаторе описал цвет иконки. Обязательно ли это для этого присваивать Модификатор? Нельзя ли прописать цвет в стилях Элемента? -->
+                <i class="fas fa-users fa-4x b-offer__icon b-offer__icon_icon1Color"></i>
+                <!-- А здесь заголовку я задал только класс Элемента и в нем прописал стили (в том числе margin). Вопрос тот же: для этого нужно было задать Модификатор? Если это правильнее делать исключительно через Модификатор, то, получается, сам Элемент в стилях нигде не будет использоваться и нужен будет лишь для того, чтобы у Модификатора был "родитель"..? -->
+                <h3 class="b-offer__title">Vivamuslibero Augue</h3>
+                <p class="m-descText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper pellentesque.</p>
+            </div>
+            <div class="col-md-3 col-sm-6 b-offer__offerItem">
+                <i class="fas fa-globe-asia fa-4x b-offer__icon b-offer__icon_icon2Color"></i>
+                <h3 class="b-offer__title">Vivamuslibero Augue</h3>
+                <p class="m-descText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper pellentesque.</p>
+            </div>
+            <div class="col-md-3 col-sm-6 b-offer__offerItem">
+                <i class="fas fa-cogs fa-4x b-offer__icon b-offer__icon_icon3Color"></i>
+                <h3 class="b-offer__title">Vivamuslibero Augue</h3>
+                <p class="m-descText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper pellentesque.</p>
+            </div>
+            <div class="col-md-3 col-sm-6 b-offer__offerItem">
+                <i class="fas fa-leaf fa-4x b-offer__icon b-offer__icon_icon4Color"></i>
+                <h3 class="b-offer__title">Vivamuslibero Augue</h3>
+                <p class="m-descText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper pellentesque.</p>                
+            </div>                
+        </div> 
+        
+        <div class="row b-projects">
+            <div class="col-md-3 col-sm-6 b-projects_flex b-offer__offerItem">
+                <div class="b-projects__img b-projects__img_style">200 x 130px</div>
+                <h3 class="b-projects__title">Project Title</h3>
+                <p class="m-descText">Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
+                <a class="b-projects__linkDetails m-linksGreen" href="#">View Details >></a>
+            </div>
+            <div class="col-md-3 col-sm-6 b-projects_flex b-offer__offerItem">
+                <div class="b-projects__img b-projects__img_style">200 x 130px</div>
+                <h3 class="b-projects__title">Project Title</h3>
+                <p class="m-descText">Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
+                <a class="b-projects__linkDetails m-linksGreen" href="#">View Details >></a>
+            </div>
+            <div class="col-md-3 col-sm-6 b-projects_flex b-offer__offerItem">
+                <div class="b-projects__img b-projects__img_style">200 x 130px</div>
+                <h3 class="b-projects__title">Project Title</h3>
+                <p class="m-descText">Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
+                <a class="b-projects__linkDetails m-linksGreen" href="#">View Details >></a>
+            </div>
+            <div class="col-md-3 col-sm-6 b-projects_flex b-offer__offerItem">
+                <div class="b-projects__img b-projects__img_style">200 x 130px</div>
+                <h3 class="b-projects__title">Project Title</h3>
+                <p class="m-descText">Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
+                <a class="b-projects__linkDetails m-linksGreen" href="#">View Details >></a>
+            </div>          
+        </div>
+
+        <footer class="row b-footer">
+            <div class="col-md-3 col-sm-4 b-footer__contacts">
+                <h3 class="b-footer__titleItem">CONTACT DETAILS</h3>
+                <p class="b-footer__text">Convallisijusto vestas mus pellentum aenean sapibulum in aliquam volut pat integest nulla. 
+                    <br><br>
+                    Tel: xxxxx xxxxxxxxxx<br>
+                    Fax: xxxxx xxxxxxxxxx<br>
+                    Email: contact@mydomain.com
+                </p>
+            </div>
+            <div class="col-md-3 col-sm-4 b-footer__links">
+                <h3 class="b-footer__titleItem">QUICK LINKS</h3>
+                <ul>
+                    <li class="b-footer__listStyle"><a class="m-linksGreen" href="#">Link Text Here</a></li>
+                    <li class="b-footer__listStyle"><a class="m-linksGreen" href="#">Link Text Here</a></li>
+                    <li class="b-footer__listStyle"><a class="m-linksGreen" href="#">Link Text Here</a></li>
+                    <li class="b-footer__listStyle"><a class="m-linksGreen" href="#">Link Text Here</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-4 b-footer__blog">
+                <h3 class="b-footer__titleItem">FROM THE BLOG</h3>
+                <h4 class="b-footer__subTitleItem">Blog Post Title</h4>
+                <p class="b-footer__datePost">Posted by Admin on 00.00.0000</p>
+                <p class="b-footer__text">Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed facilispede estibulum.</p>
+                <a class="b-footer__readMoreRight m-linksGreen" href="#">Read More >></a>
+            </div>
+            <div class="col-md-3 col-sm-12 b-footer__form">
+                <h3 class="b-footer__titleItem">GRAB OUR NEWSLETTER</h3>
+                <form action="#">
+                    <input class="b-footer__input m-inputState" type="text" placeholder="Name">
+                    <input class="b-footer__input m-inputState" type="email" placeholder="Email">
+                    <button class="b-footer__submitButton m-buttonState">SUBMIT</button>
+                </form>
+            </div>
+        </footer>
+        <div class="row justify-content-between b-copyright">
+            <p class="b-copyright_text">Copyright © 2013 - All Rights Reserved - Domain Name</p>
+            <p class="b-copyright_text">Template by OS Templates</p>
+        </div>
+        
+    </div>    
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

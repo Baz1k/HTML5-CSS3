@@ -3,9 +3,21 @@
     background-color: #81b300;
     margin: 0;
 
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
     &__menu {
         list-style-type: none;
         margin: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include media-breakpoint-down(md) {
+            order: 2;
+        }
 
         &Item {
             padding: 0 10px;
@@ -21,7 +33,12 @@
 
     &__searchBlock {
         display: grid;
-        grid-template: 30px / 3fr 1fr;             
+        grid-template: 30px / 3fr 1fr;  
+        
+        @include media-breakpoint-down(md) {
+            margin-bottom: 20px;
+            // width: 40%;
+        }
     }
 
     &__inputSearch {
@@ -44,16 +61,5 @@
         transition: .3s;
     }
 
-    &__inputSearch:focus,
-    &__buttonSearch:focus {
-        outline: none;
-    }
-
-    &__buttonSearch:hover {
-        box-shadow: 0 0 5px 1px #212121;
-    }
-
-    &__buttonSearch:active {
-        transform: scale(0.95);        
-    }
+    
 }

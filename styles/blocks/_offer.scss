@@ -1,0 +1,54 @@
+.b-offer {
+
+    margin: 0;
+    background-color: #ffffff;
+    padding: 50px 15px;
+
+    @include media-breakpoint-down(sm) {
+        padding: 25px 10px;;
+    }
+
+    &__offerItem {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include media-breakpoint-only(sm) {
+        &__offerItem:nth-child(-n+2) {
+            margin-bottom: 15px;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        &__offerItem:nth-child(n+2) {
+            margin-top: 30px;
+        }
+    }
+
+    &__icon {
+
+        &_icon1Color {
+            color: #c45f4b;
+        }
+
+        &_icon2Color {
+            color: #cf9d41;
+        }
+
+        &_icon3Color {
+            color: #3d5f12;
+        }
+
+        &_icon4Color {
+            color: #7da3b7;
+        }
+    }
+
+    &__title {
+        margin: 20px 0;
+        color: $greenColor;
+        font-size: 18px;
+        font-weight: 400;
+    }    
+}

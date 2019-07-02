@@ -1,0 +1,26 @@
+.b-socialIcons {
+    display: grid;
+    padding: 8px 13px;    
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+    justify-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: $greenColor;
+    
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        color: #fff;
+        font-size: 18px;
+        background-color: black;
+        border-radius: 50%;
+    }
+    &__item:hover {
+        background-color: #00acee;
+        cursor: pointer;
+    }
+}

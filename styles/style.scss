@@ -1,9 +1,71 @@
+@import "../bootstrap-4.0.0-beta.2/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
 
 $greenColor: #81b300;
 
-@import "blocks/_default.scss";
-@import "blocks/_mainContainer.scss";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+.m-mainContainer {
+    max-width: 1000px;
+    padding: 30px 20px;
+    background-color: #1f1f1f;
+    margin: 0 auto;
+
+    @include media-breakpoint-down(xs) {
+        padding: 0;
+    }
+}
+
+.m-linksGreen {
+    color: $greenColor;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.m-linksGreen:hover {
+    color: $greenColor;
+    text-decoration: underline;
+}
+
+.m-descText {
+    margin: 0;
+    color: #888888;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: justify;
+    margin-bottom: 14px;
+}
+
+.m-inputState:focus,
+.m-buttonState:focus {
+    outline: none;
+}
+
+.m-buttonState:hover {
+    box-shadow: 0 0 5px 1px #212121;
+}
+.m-buttonState:active {
+    transform: scale(0.95);        
+}
+
 @import "blocks/_header.scss";
+@import "blocks/_socialIcons.scss";
 @import "blocks/_navbar.scss";
-@import "blocks/_slider.scss"
+@import "blocks/_slider.scss";
+@import "blocks/_offer.scss";
+@import "blocks/_projects.scss";
+@import "blocks/_footer.scss";
+@import "blocks/_copyright.scss";

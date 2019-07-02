@@ -1,0 +1,100 @@
+.b-footer {
+    margin: 0;
+    padding: 40px 15px;
+    background-color: #3b3b3b;
+
+    @include media-breakpoint-down(sm) {
+        padding: 25px 10px;
+    }
+
+    &__titleItem {
+        color: #666666;
+        font-size: 13px;
+        font-weight: 400;
+        margin-bottom: 30px;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__text {
+        color: #999999;
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    &__listStyle {
+        line-height: 10px;
+        list-style-type: none;
+        padding: 10px 0;
+        border-bottom: 1px solid #484848;
+    }
+
+    &__listStyle:nth-child(1) {
+        padding-top: 0;
+    }
+
+    &__subTitleItem {
+        color: #999999;
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 7px;
+    }
+
+    &__datePost {
+        color: #999999;
+        font-size: 11px;
+        font-weight: 400;
+        margin-bottom: 11px;
+    }
+
+    &__readMoreRight {
+        float: right;
+    }    
+
+    @include media-breakpoint-down(sm) {
+        &__form {
+            text-align: center;
+            margin-top: 40px;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        background-color: #1f1f1f;
+        border-radius: 5px;
+        border: none;
+        padding: 8px 0 8px 10px;
+        color: #999999;
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    &__input:nth-child(2) {
+        margin: 10px 0;
+    }
+
+    &__submitButton {
+        background-color: #1f1f1f;
+        border-radius: 5px;
+        border: none;
+        padding: 8px 10px;
+        color: $greenColor;
+        font-size: 13px;
+        font-weight: bold;
+
+        @include media-breakpoint-down(sm) {
+            width: 30%;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        &__links,
+        &__blog,
+        &__form {
+            margin-top: 40px;
+        }        
+    }
+}

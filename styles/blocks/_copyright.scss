@@ -1,0 +1,25 @@
+.b-copyright {
+    margin: 0;
+    padding: 25px 30px;
+    background-color: #2e2e2e;
+
+    @include media-breakpoint-down(sm) {
+        padding: 15px 25px;
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;      
+    }
+
+    &_text {
+        color: #737373;
+        font-size: 12px;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+        &_text:first-child {
+            margin-bottom: 5px;
+        }
+    }
+}
